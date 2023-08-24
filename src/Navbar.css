@@ -1,0 +1,21 @@
+.navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #f5576c;
+  }
+  
+  .navbar-container button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-container button:hover {
+    background-color: #f5576c;
+    cursor: pointer;
+  }
+  
