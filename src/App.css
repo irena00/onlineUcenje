@@ -1,72 +1,102 @@
-.homepage-container {
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   font-family: 'Arial', sans-serif;
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-header {
-  background-color: #3498db;
-  color: white;
-  padding: 20px 0;
-  border-radius: 10px;
-  text-align: center;
+h2 {
+  color: #ffffff;
+  margin-bottom: 30px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 15px;
 }
 
-header p {
-  margin-top: 10px;
+label {
+  color: #ffffff;
+  margin-bottom: 5px;
 }
 
-.features {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.feature {
-  background-color: #f1f1f1;
-  padding: 20px;
-  border-radius: 10px;
-  transition: background-color 0.3s;
-}
-
-.feature:hover {
-  background-color: #e0e0e0;
-}
-
-.feature h2 {
-  margin-top: 0;
-  font-size: 1.5em;
-}
-
-.feature p {
-  margin-top: 10px;
-}
-
-.feature a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 15px;
-  background-color: #3498db;
-  color: white;
+input {
+  padding: 10px;
   border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  border: none;
 }
 
-.feature a:hover {
-  background-color: #2980b9;
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  background-color: #f5576c;
+  transition: background-color 0.3s ease;
 }
 
-footer {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #555;
+button:hover {
+  background-color: #f093fb;
+  cursor: pointer;
+}
+
+
+.update-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.update-form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.update-form-container label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.update-form-container input, 
+.update-form-container textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.update-form-container button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.update-form-container button:hover {
+  background-color: #34495e;
+}
+
+
+.quizz{
+  margin: 10%;
+}
+
+.course-container{
+  margin: 5%;
 }
