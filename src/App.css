@@ -100,3 +100,63 @@ button:hover {
 .course-container{
   margin: 5%;
 }
+
+/* Osnovni stilovi za homepage-container */
+.homepage-container {
+  font-family: 'Arial', sans-serif;
+ 
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.feature {
+  background-color: #fff;
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+
+.feature:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature h2 {
+  color: #007BFF;
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  color: #555;
+}
+
+ 
