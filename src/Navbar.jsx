@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './Navbar.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
     let navigate =  useNavigate();
@@ -16,7 +16,7 @@ function Navbar() {
     .then(response => {
       sessionStorage.removeItem('token');
       alert("You have been logged out.");
-      navigate('/login')
+      navigate('/')
       window.sessionStorage.setItem('token',null);
       sessionStorage.clear();
     })
@@ -25,16 +25,24 @@ function Navbar() {
       alert("Logout failed. Please try again.");
     });
   };
-
+  function handleRegister(){
+    navigate('/register');
+  }
+  function handleLogin(){
+    navigate('/');
+  }
   return (
     <>
     {sessionStorage.getItem("token")? 
             <div className="navbar-container">
+              
             <button onClick={handleLogout}>Logout</button>
         </div>
 :
     <div className="navbar-container">
-                <button>dobro dosli</button>
+      <button onClick={handleLogin}>dobro dosli </button>
+       <button onClick={handleRegister}>  Registruj se</button>
+                
             </div>
 }</>
     

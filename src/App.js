@@ -10,8 +10,8 @@ import Test from './Test';
 import Profesor from './Profesor';
 import ProfesorKurs from './ProfesorKurs';
 import Update from './Update';
-import Insert from './Insert';
-import HomePage from './HomePage';
+import Insert from './Insert'; 
+import OpstaKultura from './OpstaKultura';
 
 function App() {
   return (
@@ -25,9 +25,11 @@ function App() {
 
         <Route path="/profesor" element={   <Profesor></Profesor>} />
         <Route path="/profesor/kursevi/:id" element={   <ProfesorKurs></ProfesorKurs>} />
-        <Route path="/" element={   <HomePage></HomePage>} />
-          <Route path="/login" element={   <Login></Login>} />
+        
+          <Route path="/" element={   <Login></Login>} />
           <Route path="/register" element={   <Register></Register>} />
+          <Route path="/opstakultura" element={   <OpstaKultura></OpstaKultura>} />
+
           <Route path="/kursevi" element={   <Courses></Courses>} />
           <Route path="/kursevi/:id" element={   <Course></Course>} />
           <Route path="/test/:id" element={   <Test></Test>} />
