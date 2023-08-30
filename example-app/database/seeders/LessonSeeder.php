@@ -18,21 +18,24 @@ class LessonSeeder extends Seeder
         $courses = Course::all();
 
         foreach ($courses as $course) {
-            $lesson1 = Lesson::create([
-                'course_id' => $course->id,
-                'title' => 'Lekcija 1',
-                'content' => 'Ovo je sadržaj lekcije 1 za kurs ' . $course->name . '.',
-                'order' => 1,
-                'video'=>'https://www.youtube.com/watch?v=8dWL3wF_OMw'
-            ]);
+            if ($course->name == 'Uvod u Python') {
+                $lesson1 = Lesson::create([
+                    'course_id' => $course->id,
+                    'title' => 'Python sintaksa i varijable',
+                    'content' => 'Uvod u osnovnu sintaksu Python-a i rad sa varijablama.',
+                    'order' => 1,
+                    'video'=>'https://www.youtube.com/watch?v=8dWL3wF_OMw'
+                ]);
 
-            $lesson2 = Lesson::create([
-                'course_id' => $course->id,
-                'title' => 'Lekcija 2',
-                'content' => 'Ovo je sadržaj lekcije 2 za kurs ' . $course->name . '.',
-                'order' => 2,
-                'video'=>'https://www.youtube.com/watch?v=c2M-rlkkT5o'
-            ]);
+                $lesson2 = Lesson::create([
+                    'course_id' => $course->id,
+                    'title' => 'Rad sa listama i rečnicima u Pythonu',
+                    'content' => 'Kako koristiti liste i rečnike u Pythonu.',
+                    'order' => 2,
+                    'video'=>'https://www.youtube.com/watch?v=c2M-rlkkT5o'
+                ]);
+            }
+          
         }
     }
 }

@@ -75,7 +75,7 @@ function Courses() {
             <th>Price (EUR)</th>
             <th>Price (RSD)</th>
             <th>Open Course</th>
-            <th>Test</th>
+           
           </tr>
         </thead>
         <tbody>
@@ -86,7 +86,7 @@ function Courses() {
               <td>{course.price}</td>
               <td>{convertCurrency(course.price, 'RSD')}</td>
               <td><Link to={`/kursevi/${course.id}`}>Open Course</Link></td>
-              <td><Link to={`/test/${course.id}`}>Test </Link></td>
+            
             </tr>
           ))}
         </tbody>

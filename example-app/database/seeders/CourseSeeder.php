@@ -15,33 +15,33 @@ class CourseSeeder extends Seeder
     public function run()
     {
         Course::create([
-            'name' => 'Matematika',
-            'description' => 'Ovaj kurs se bavi osnovnim matematičkim konceptima.',
-            'price' => 29.99,
-        ]);
-
-        Course::create([
-            'name' => 'Nauka',
-            'description' => 'Ovaj kurs pruža uvod u različite naučne discipline.',
+            'name' => 'Uvod u Python',
+            'description' => 'Osnovni koncepti programiranja uz pomoć jezika Python.',
             'price' => 49.99,
         ]);
 
         Course::create([
-            'name' => 'Srpski jezik',
-            'description' => 'Ovaj kurs obuhvata gramatiku i pravopis srpskog jezika.',
-            'price' => 19.99,
-        ]);
-
-        Course::create([
-            'name' => 'Istorija',
-            'description' => 'Ovaj kurs se fokusira na ključne događaje iz svjetske istorije.',
+            'name' => 'Web razvoj sa HTML i CSS',
+            'description' => 'Kreiranje statičkih web stranica koristeći HTML i CSS.',
             'price' => 39.99,
         ]);
 
         Course::create([
-            'name' => 'Fizika',
-            'description' => 'Ovaj kurs istražuje osnove fizike i njenih primjena.',
-            'price' => 29.99,
+            'name' => 'JavaScript za početnike',
+            'description' => 'Naučite osnove JavaScript-a i počnite sa kreiranjem interaktivnih web stranica.',
+            'price' => 59.99,
+        ]);
+
+        Course::create([
+            'name' => 'Uvod u React',
+            'description' => 'Kako kreirati single-page aplikacije koristeći popularnu React biblioteku.',
+            'price' => 69.99,
+        ]);
+
+        Course::create([
+            'name' => 'Osnove baza podataka',
+            'description' => 'Uvod u relacijske baze podataka i osnove SQL-a.',
+            'price' => 49.99,
         ]);
     }
 }
