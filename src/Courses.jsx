@@ -7,7 +7,7 @@ function Courses() {
   const [courses, setCourses] = useState([]);
   const [search, setSearch] = useState('');
   const [sortType, setSortType] = useState('asc');
-  const [exchangeRates, setExchangeRates] = useState({}); // Dodatno stanje za kursne liste
+  const [exchangeRates, setExchangeRates] = useState({});
 
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/api/courses')

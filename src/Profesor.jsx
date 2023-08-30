@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';  
 import './Courses.css';
 import { MDBDataTable } from 'mdbreact';
 
 function Profesor() {
   const [courses, setCourses] = useState([]);
+  const navigate = useNavigate();   
 
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/api/courses')
@@ -47,6 +48,15 @@ function Profesor() {
   return (
     <div className="courses-container">
       <h2>Courses</h2>
+      
+      {/* Dugme za navigaciju ka statistikama */}
+      <button 
+        className="stats-button" 
+        onClick={() => navigate('/stats')}
+      >
+        Statistike
+      </button>
+
       <MDBDataTable
         striped
         bordered

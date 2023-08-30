@@ -14,9 +14,7 @@ class Lesson extends Model
         'order',
         'video',
         'course_id',
-        
-    
-
+         
     ];
 
     public function course()

@@ -55,14 +55,14 @@ function App() {
         <Route path="/profesor" element={   <Profesor></Profesor>} />
         <Route path="/profesor/kursevi/:id" element={   <ProfesorKurs></ProfesorKurs>} />
         
-          <Route path="/" element={   <Login></Login>} />
+       
           <Route path="/register" element={   <Register></Register>} />
           <Route path="/opstakultura" element={   <OpstaKultura></OpstaKultura>} />
 
           <Route path="/kursevi" element={   <Courses></Courses>} />
           <Route path="/kursevi/:id" element={   <Course></Course>} />
          
-
+          <Route path="/" element={   <Login></Login>} />
           
         </Routes>
         

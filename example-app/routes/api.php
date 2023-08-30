@@ -32,6 +32,9 @@ Route::get('/quizzes/{id}', [QuizController::class, 'index']);
 Route::get('/users', [AuthController::class, 'index']);
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
+
+
+    
     Route::post('/logout', [AuthController::class, 'logout']);
   
 });
