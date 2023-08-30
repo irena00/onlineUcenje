@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 function OpstaKultura() {
     const [questions, setQuestions] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -51,9 +53,39 @@ function OpstaKultura() {
     if (!questions.length) return <div>Loading...</div>;
 
     const allAnswers = [...questions[currentQuestion].incorrect_answers, questions[currentQuestion].correct_answer].sort(() => Math.random() - 0.5);
+    const generatePdf = () => {
+        const content = [];
+        
+        questions.forEach((question, index) => {
+            content.push({ text: `Question ${index + 1}: ${question.question}\n`, bold: true });
+            question.incorrect_answers.concat(question.correct_answer).sort(() => Math.random() - 0.5).forEach(answer => {
+                content.push(answer + '\n');
+            });
+            content.push('\n');
+        });
 
+        const documentDefinition = {
+            content: content
+        };
+
+        pdfMake.createPdf(documentDefinition).download("questions.pdf");
+    };
+    
     return (
         <div className="quiz-container">
+             <button onClick={generatePdf}>Generate PDF</button>
+             <div id="pdfContent" style={{display: 'none'}}>
+                {questions.map((question, index) => (
+                    <div key={index}>
+                        <h3 dangerouslySetInnerHTML={{ __html: question.question }} />
+                        {[...question.incorrect_answers, question.correct_answer]
+                            .sort(() => Math.random() - 0.5)
+                            .map(answer => (
+                                <p key={answer} dangerouslySetInnerHTML={{ __html: answer }} />
+                            ))}
+                    </div>
+                ))}
+            </div>
             {!quizFinished ? (
                 <>
                     <h2 dangerouslySetInnerHTML={{ __html: questions[currentQuestion].question }} />

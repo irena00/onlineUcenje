@@ -46,3 +46,18 @@ a:hover {
   background-color: #007BFF;
   color: white;
 }
+/* u vašem Courses.css fajlu */
+.test-button {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.test-button:hover {
+  background-color: #0056b3;
+}

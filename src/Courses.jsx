@@ -67,6 +67,11 @@ function Courses() {
           <option value="desc">Descending</option>
         </select>
       </div>
+      <div>
+        <Link to="/opstakultura">
+          <button className="test-button">Test</button>
+        </Link>
+      </div>
       <table>
         <thead>
           <tr>
